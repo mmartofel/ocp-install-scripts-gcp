@@ -1,0 +1,41 @@
+If you need to install given OCP edition you need to change your drive image according to the doc:
+
+https://docs.openshift.com/container-platform/4.13/installing/installing_gcp/installing-gcp-customizations.html
+
+
+below is the doc digest for this topic:
+
+
+
+
+Locate the following files:
+
+<installation_dir>/openshift/99_openshift-cluster-api_worker-machineset-0.yaml
+<installation_dir>/openshift/99_openshift-cluster-api_worker-machineset-1.yaml
+<installation_dir>/openshift/99_openshift-cluster-api_worker-machineset-2.yaml
+
+In each file, edit the .spec.template.spec.providerSpec.value.disks[0].image property to reference the offer to use:
+
+OpenShift Container Platform
+projects/redhat-marketplace-public/global/images/redhat-coreos-ocp-413-x86-64-202305021736
+
+OpenShift Platform Plus
+projects/redhat-marketplace-public/global/images/redhat-coreos-opp-413-x86-64-202305021736
+
+OpenShift Kubernetes Engine
+projects/redhat-marketplace-public/global/images/redhat-coreos-oke-413-x86-64-202305021736
+
+you can check for actual images available using commands:
+
+gcloud compute images list --project=redhat-marketplace-public --filter="name ~ 'redhat-coreos.'"
+gcloud compute images describe redhat-coreos-ocp-48-x86-64-202206140145
+
+The image value that will be used during installation can be determined from the self link of the image
+
+sl=$(gcloud compute images describe \
+         redhat-coreos-ocp-48-x86-64-202206140145 \
+         --project=redhat-marketplace-public --format=json | jq -r .selfLink)
+
+echo ${sl#*v1/}
+
+

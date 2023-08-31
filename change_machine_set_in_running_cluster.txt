@@ -1,0 +1,13 @@
+-------- CHANGING MACHINE SETS IN A RUNNING CLUSTER --------------------------
+
+To change the compute nodes in an existing cluster to use OpenShift Container
+Platform images from the GCP Marketplace, follow the steps for Modifying a
+machine set [8]. The values to change in the cluster machine sets are the
+same as in the Modifying the installation manifests to use GCP Marketplace
+images [9] step.
+
+https://access.redhat.com/documentation/en-us/openshift_container_platform/4.11/html/machine_management/modifying-machineset
+
+Read this article, https://access.redhat.com/articles/6976804
+
+

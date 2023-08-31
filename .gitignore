@@ -1,0 +1,50 @@
+# Ignore some files from repo
+gcp_service_account.json
+login.txt
+openshift-install
+pull-secret.txt
+manifest
+config
+ssh/id_ed25519
+ssh/id_ed25519.pub
+firstgcp
+
+#Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# IntelliJ
+.idea
+*.ipr
+*.iml
+*.iws
+
+# NetBeans
+nb-configuration.xml
+
+# Visual Studio Code
+.vscode
+.factorypath
+
+# OSX
+.DS_Store
+
+# Vim
+*.swp
+*.swo
+
+# patch
+*.orig
+*.rej
+
+# Local environment
+.env

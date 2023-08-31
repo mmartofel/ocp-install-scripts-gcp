@@ -1,0 +1,10 @@
+
+rm /Users/mmartofe/.gcp/osServiceAccount.json
+
+# My installation dir is ./config so I need to purge this one
+rm -rf ./config
+# My cluster name at simple install is firstgcp so I need to remove it before config cleation as well
+rm -rf ./firstgcp
+
+./openshift-install create install-config --dir ./config --log-level debug
+
