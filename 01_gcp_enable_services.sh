@@ -21,8 +21,8 @@ gcloud services enable cloudasset.googleapis.com
 
 # Enable compute instances listing
 
-# gcloud services enable compute.instances.list
-# gcloud services enable compute.images.list
+gcloud services enable compute.instances.list
+gcloud services enable compute.images.list
 
 # Enable compute instances listing
 gcloud services enable deploymentmanager.googleapis.com
