@@ -1,3 +1,6 @@
+# Provide your own pull secret file location
+export pullsecret_file=./pull-secret.txt
+
 rm /Users/mmartofe/.gcp/osServiceAccount.json
 
 # My installation dir is ./config so I need to purge this one
