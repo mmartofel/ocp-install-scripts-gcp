@@ -26,4 +26,3 @@ gcloud services enable compute.images.list
 
 # Enable compute instances listing
 gcloud services enable deploymentmanager.googleapis.com
-
