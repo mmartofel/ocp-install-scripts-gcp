@@ -1,5 +1,6 @@
 # Provide your own pull secret file location
-export pullsecret_file=./pull-secret.txt
+export PULL_SECRET=`cat ./pull-secret.txt`
+# export GOOGLE_CREDENTIALS=./gcp_service_account.json
 
 rm /Users/mmartofe/.gcp/osServiceAccount.json
 
